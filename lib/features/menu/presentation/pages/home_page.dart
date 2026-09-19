@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import 'package:su_viet/app/theme/app_colors.dart';
 import 'package:su_viet/app/routers/router_name.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,7 +9,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    backgroundColor: const Color(0xfff2e3c6),
+    backgroundColor: AppColors.parchment,
     body: Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -18,13 +19,13 @@ class HomePage extends StatelessWidget {
             style: TextStyle(
               fontSize: 32,
               fontWeight: FontWeight.bold,
-              color: Color(0xff4d3020),
+              color: AppColors.ink,
             ),
           ),
           const SizedBox(height: 12),
           const Text(
             'Prototype tuần 1 · Đinh Bộ Lĩnh',
-            style: TextStyle(color: Color(0xff6d5034)),
+            style: TextStyle(color: AppColors.mutedInk),
           ),
           const SizedBox(height: 32),
           FilledButton.icon(

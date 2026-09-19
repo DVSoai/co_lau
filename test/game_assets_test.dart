@@ -18,7 +18,7 @@ void main() {
       game.mount();
       await game.ready();
       game.update(0);
-      final player = game.children.whereType<PlayerComponent>().single;
+      final player = game.world.children.whereType<PlayerComponent>().single;
       expect(player.current, PlayerAnimation.idle);
       final atlas = game.images.fromCache('reed_leader_sheet.png');
       expect(atlas.width, 1536);

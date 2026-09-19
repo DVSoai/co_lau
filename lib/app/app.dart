@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'routers/router.dart';
+import 'routers/route_path.dart';
+import 'theme/app_colors.dart';
 
 class CoLauApp extends StatelessWidget {
   const CoLauApp({super.key});
@@ -10,10 +11,7 @@ class CoLauApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'Cờ Lau Hoa Lư',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorSchemeSeed: const Color(0xff8b5e34),
-        useMaterial3: true,
-      ),
+      theme: ThemeData(colorSchemeSeed: AppColors.accent, useMaterial3: true),
       routerConfig: AppRouter.router,
     );
   }
